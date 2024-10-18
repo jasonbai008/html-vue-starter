@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>HTML-Vue-Starter</title>
+    <!-- 引入 Element UI CSS V2.15.6 -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- 自定义样式 -->
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{message}}</h1>
+        <p>这是一个使用 Vue 和 Element UI 创建的简单页面。</p>
+        <el-button type="primary" @click="gotoElement" size="small">Element UI</el-button>
+    </div>
+
+    <!-- 引入 Vue V2.6.14 -->
+    <script src="./js/vue.js"></script>
+    <!-- 引入 Element UI JS V2.15.6 -->
+    <script src="./js/index.js"></script>
+    <!-- 自定义脚本 -->
+    <script>
+        // Your custom JavaScript code here
+        new Vue({
+            el: '#app',
+            data: function () {
+                return {
+                    message: 'Hello World '
+                }
+            },
+            methods: {
+                gotoElement: function () {
+                    window.open('https://element.eleme.cn/#/zh-CN/component/layout', '_blank');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
